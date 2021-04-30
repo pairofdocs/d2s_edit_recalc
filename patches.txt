@@ -1,8 +1,60 @@
+### Quests ----------------------------------------------------------------------
 
-# address 0 - testing byte edit
-0, 00 9A
-     
+# reset cowking kill Norm. This also sets the cain quest as completed
+#353, 19 10
+
+# reset cowking kill NM.   ""    (Quest struct is len 96 bytes)
+449, 19 10
+
+# reset cowking kill Hell. "" 
+#545, 19 10
+
+
+# reset larzuk quest Norm
+#415, 00 00
+
+# reset larzuk quest NM
+511, 00 00
+
+# reset larzuk quest Hell
+#607, 00 00
+
+
+# reset izual quest Norm
+#395, 00 00
+
+# reset izual quest NM
+491, 00 00
+
+# reset izual quest Hell
+#587, 00 00
+
+
+# reset hellforge quest Norm
+#399, 00 00
+
+# reset hellforge quest NM
+495, 00 00
+
+# reset hellforge quest Hell
+#591, 00 00
 
 
 
+### Char Stats ------------------------------------------------------------------
 
+# rename character. Note: the d2s file has to be named the same as the char name
+# offset 20-35
+
+# change mana to 666
+# offset 767.  9 bit encoding?
+
+
+
+### Credits and Tools -----------------------------------------------------------
+
+# d2s save file format, https://user.xmission.com/~trevin/DiabloIIv1.09_File_Format.shtml
+# d2s file format https://github.com/krisives/d2s-format
+# Themperor on discord for the RecalcCRC.exe tool
+# d2s converter, TY Riv, https://d07riv.github.io/d2r.html 
+# d2s converter, TY Dschu, https://dschu012.github.io/d2s/
