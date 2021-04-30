@@ -48,3 +48,4 @@ for line in [l for l in lines if l.strip() and l[0] != '#']:
 with open(filename, 'wb') as f:
     f.write(fix_checksum(bytarr))
 
+print(f'd2s file {filename} saved successfully!')
