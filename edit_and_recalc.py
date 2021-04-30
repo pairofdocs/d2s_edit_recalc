@@ -17,6 +17,9 @@ sum = (sum << 1) + data[i];
 https://www.unf.edu/~cwinton/html/cop3601/s10/class.notes/assgn3-endian_format.pdf
 # natural ordering (decimal 923) is big endian
 
+# lots of function examples
+https://www.devdungeon.com/content/working-binary-data-python
+
 
 
 a = 17
@@ -162,3 +165,33 @@ start offset: bytes to write
 
 and once patches are written, calc the checksum and write that to offset12
 
+
+
+a=0
+with open('testtt.d2s', 'rb') as f:
+    btot = f.read()  # btot is bytes object (not bytes array)
+    bytarr = bytearray(btot)
+
+with open('patches.txt', 'r') as f:
+    lines = f.read().splitlines()
+
+
+# skip comments and blank lines and apply hex edits/patches
+for line in [l for l in lines if l.strip() and l[0] != '#']:
+    print(line)
+
+    address = int(line.split(',')[0])
+    hexstr_list = line.split(',')[1].strip().split()
+    
+    # edit bytesarray       # orig 0:2  int85, 170 -> (b'U\xaa') -> 55aa
+    for i in range(len(hexstr_list)):
+        print(address + i, hexstr_list[i])
+
+        bytarr[address + i] = int(hexstr_list[i], 16)
+
+### then set the checksum 4 bytes to 00 00 00 00
+#   and write updated checksum
+
+
+with open('test_edited.d2s', 'wb') as f:
+    f.write(bytarr)
