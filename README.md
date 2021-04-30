@@ -14,6 +14,8 @@
 3. Double click `edit_and_recalc.exe`
 4. Move your edited savefile back to `Saved Games\Diablo II Resurrected Tech Alpha\` and start D2
 
+- ![Folder example](https://i.imgur.com/amNc1vK.png)
+
 **Note**: The first time `edit_and_recalc.exe` is run, it creates a backup file of your save file called `MyAwesomeChar.d2s.bak`. 
 This backup can be moved/copied and used if you want to undo any changes.
 
