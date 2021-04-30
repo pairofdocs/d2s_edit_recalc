@@ -18,6 +18,16 @@
 This backup can be moved/copied and used if you want to undo any changes.
 
 
+## Example
+This uncommented NM larzuk quest line will be applied to your save file
+
+`patches.txt:`
+```txt
+# reset larzuk quest NM
+511, 00 00
+```
+
+
 ## Credits and Tools 
 - d2s save file format, https://user.xmission.com/~trevin/DiabloIIv1.09_File_Format.shtml
 - d2s file format https://github.com/krisives/d2s-format
