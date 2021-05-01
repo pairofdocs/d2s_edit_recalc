@@ -10,7 +10,7 @@
 
 ## Usage
 1. Download [d2s_edit.exe](https://github.com/pairofdocs/d2s_edit_recalc/raw/master/d2s_edit.exe) and [patches.txt](https://github.com/pairofdocs/d2s_edit_recalc/blob/master/patches.txt) (right click "Raw" and "Save Link As") to the same folder
-2. Edit `patches.txt` for quests that you want to reset by commenting/uncommenting specific lines
+2. Edit `patches.txt` for quests that you want to reset by commenting/uncommenting specific lines ([example below](https://github.com/pairofdocs/d2s_edit_recalc/blob/master/README.md#example))
 3. Double click `d2s_edit.exe` to start the app
 4. Click on "Open File and Run" to select you `.d2s` character file and apply the edits from `patches.txt`. Save files are in `Saved Games\Diablo II Resurrected Tech Alpha\`
 5. Start D2
