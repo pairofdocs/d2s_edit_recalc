@@ -22,9 +22,16 @@ This backup can be moved/copied and used if you want to undo any changes.
 
 
 ## Example
-This uncommented NM larzuk quest line will be applied to your save file
 
 `patches.txt:`
+
+This is the NM larzuk quest edit **disabled**:
+```txt
+# reset larzuk quest NM
+# 511, 00 00
+```
+
+This is the quest edit **enabled**:
 ```txt
 # reset larzuk quest NM
 511, 00 00
