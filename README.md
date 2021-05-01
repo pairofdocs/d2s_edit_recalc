@@ -8,15 +8,16 @@
 - Reset the larzuk item socket quest
 
 
-## Usage TODO: add gui directions
-1. Place your d2 character save file (MyAwesomeChar.d2s) in the same folder as the executable `edit_and_recalc.exe`
+## Usage
+1. Download the [GUI]() and [patches.txt](https://github.com/pairofdocs/d2s_edit_recalc/blob/master/patches.txt) (right click "Raw" and "Save Link As") to the same folder
 2. Edit `patches.txt` for quests that you want to reset by commenting/uncommenting specific lines
-3. Double click `edit_and_recalc.exe`
-4. Move your edited savefile back to `Saved Games\Diablo II Resurrected Tech Alpha\` and start D2
+3. Double click `.exe` to start the app
+4. Click on "Open File and Run" to select you `.d2s` character file and apply the edits from `patches.txt`
+5. Start D2
 
 - ![GUI](https://i.imgur.com/GW520BC.png)
 
-**Note**: The first time `edit_and_recalc.exe` is run, it creates a backup file of your save file called `MyAwesomeChar.d2s.bak`. 
+**Note**: The first time the `.exe` is run on a char file (e.g. `MyAwesomeChar.d2s`), it creates a backup file (`MyAwesomeChar.d2s.bak`). 
 This backup can be moved/copied and used if you want to undo any changes.
 
 

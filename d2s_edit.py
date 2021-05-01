@@ -1,7 +1,6 @@
 import os
 import sys
 import wx
-from os.path import basename
 
 # refs 
 # https://wxpython.org/Phoenix/docs/html/wx.FileDialog.html
@@ -23,7 +22,6 @@ imglogo = resource_path("d2logo_sm.png")
 
 
 class Mywin(wx.Frame): 
-            
     def __init__(self, parent, title): 
         super(Mywin, self).__init__(parent, title = title, size = (380,420))  
         self.InitUI() 
@@ -49,14 +47,14 @@ class Mywin(wx.Frame):
                         style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST) as fileDialog:
 
             if fileDialog.ShowModal() == wx.ID_CANCEL:
-                return     # the user changed their mind
+                return
 
             # load file and run
             pathname = fileDialog.GetPath()
             try:
                 with open(pathname, 'r') as file:
                     # self.doLoadDataOrWhatever(file)
-                    wx.MessageBox(f"D2S file {basename(pathname)} edited and saved.", "Result", wx.OK | wx.ICON_INFORMATION) 
+                    wx.MessageBox(f"D2S file {os.path.basename(pathname)} edited and saved.", "Result", wx.OK | wx.ICON_INFORMATION) 
             except IOError:
                 wx.LogError(f"Cannot open file {newfile}")
 
