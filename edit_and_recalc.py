@@ -19,33 +19,37 @@ def fix_checksum(bytarr):
     return bytarr
 
 
-filename = glob.glob('*.d2s')[0]
+def open_and_edit(filename):
+    # read .d2s char file bytes
+    with open(filename, 'rb') as f:
+        bytarr = bytearray(f.read())  # f.read() is bytes object (not bytes array)
 
-# read .d2s char file bytes
-with open(filename, 'rb') as f:
-    bytarr = bytearray(f.read())  # f.read() is bytes object (not bytes array)
+    # save a backup of the .d2s char file
+    with open(filename + '.bak', 'wb') as f:
+        f.write(bytarr)
 
-# save a backup of the .d2s char file
-with open(filename + '.bak', 'wb') as f:
-    f.write(bytarr)
+    # read patches
+    with open('patches.txt', 'r') as f:
+        lines = f.read().splitlines()
 
-# read patches
-with open('patches.txt', 'r') as f:
-    lines = f.read().splitlines()
+    # skip comments and blank lines and apply hex edits/patches
+    for line in [l for l in lines if l.strip() and l[0] != '#']:
+        print(line)
 
-# skip comments and blank lines and apply hex edits/patches
-for line in [l for l in lines if l.strip() and l[0] != '#']:
-    print(line)
+        address = int(line.split(',')[0])
+        hexstr_list = line.split(',')[1].strip().split()
+        
+        # edit bytesarray       # orig 0:2  int85, 170 -> (b'U\xaa') -> 55aa
+        for i in range(len(hexstr_list)):
+            bytarr[address + i] = int(hexstr_list[i], 16)
 
-    address = int(line.split(',')[0])
-    hexstr_list = line.split(',')[1].strip().split()
-    
-    # edit bytesarray       # orig 0:2  int85, 170 -> (b'U\xaa') -> 55aa
-    for i in range(len(hexstr_list)):
-        bytarr[address + i] = int(hexstr_list[i], 16)
+    # write patched file with updated checksum
+    with open(filename, 'wb') as f:
+        f.write(fix_checksum(bytarr))
 
-# write patched file with updated checksum
-with open(filename, 'wb') as f:
-    f.write(fix_checksum(bytarr))
+    print(f'd2s file {filename} saved successfully!')
 
-print(f'd2s file {filename} saved successfully!')
+
+if __name__ == "__main__":
+    filename = glob.glob('*.d2s')[0]
+    open_and_edit(filename)

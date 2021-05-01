@@ -1,0 +1,11 @@
+
+https://stackoverflow.com/questions/7674790/bundling-data-files-with-pyinstaller-onefile
+
+a.datas += [('d2logo_sm.png','C:\\Users\\svyat\\test_wxgui\\d2logo_sm.png', 'Data')]
+
+
+# to remove the console when launching gui with pyinstaller exe
+https://www.blog.pythonlibrary.org/2019/03/19/distributing-a-wxpython-application/
+
+pyinstaller image_viewer_slideshow.py --noconsole --onefile
+
