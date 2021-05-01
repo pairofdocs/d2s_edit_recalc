@@ -34,7 +34,7 @@ def open_and_edit(filename):
 
     # skip comments and blank lines and apply hex edits/patches
     for line in [l for l in lines if l.strip() and l[0] != '#']:
-        print(line)
+        # print(line)
 
         address = int(line.split(',')[0])
         hexstr_list = line.split(',')[1].strip().split()
@@ -47,9 +47,9 @@ def open_and_edit(filename):
     with open(filename, 'wb') as f:
         f.write(fix_checksum(bytarr))
 
-    print(f'd2s file {filename} saved successfully!')
 
 
 if __name__ == "__main__":
     filename = glob.glob('*.d2s')[0]
     open_and_edit(filename)
+    print(f'd2s file {filename} saved successfully!')

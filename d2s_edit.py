@@ -2,6 +2,8 @@ import os
 import sys
 import wx
 
+from edit_and_recalc import open_and_edit
+
 # refs 
 # https://wxpython.org/Phoenix/docs/html/wx.FileDialog.html
 # https://www.tutorialspoint.com/wxpython/wx_dialog_class.htm
@@ -52,11 +54,11 @@ class Mywin(wx.Frame):
             # load file and run
             pathname = fileDialog.GetPath()
             try:
-                with open(pathname, 'r') as file:
-                    # self.doLoadDataOrWhatever(file)
-                    wx.MessageBox(f"D2S file {os.path.basename(pathname)} edited and saved.", "Result", wx.OK | wx.ICON_INFORMATION) 
-            except IOError:
-                wx.LogError(f"Cannot open file {newfile}")
+                open_and_edit(pathname)
+                wx.MessageBox(f"D2S file {os.path.basename(pathname)} edited and saved.", "Result", wx.OK | wx.ICON_INFORMATION) 
+            except Exception as e:
+                wx.LogError(f"Error: {e}")
+
 
 		
 app  =  wx.App() 
