@@ -20,6 +20,16 @@
 #607, 00 00
 
 
+# Complete Eve of destruction (Baal quest) Norm.  Useful for unlocking the secret cow level before killing Baal in-game
+#425, 05 16
+
+# Complete Eve of destruction (Baal quest) Nightmare
+#521, DD 17
+
+# Complete Eve of destruction (Baal quest) Hell
+#617, DD 17
+
+
 # reset izual quest Norm
 #395, 00 00
 
