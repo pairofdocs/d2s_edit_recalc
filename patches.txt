@@ -50,6 +50,9 @@
 #591, 00 00
 
 
+### Char Map ID, Seed -----------------------------------------------------------
+171, 333, decimal
+
 
 ### Char Stats ------------------------------------------------------------------
 
@@ -58,13 +61,3 @@
 
 # change mana to 666
 # offset 767.  9 bit encoding?
-
-
-
-### Credits and Tools -----------------------------------------------------------
-
-# d2s save file format, https://user.xmission.com/~trevin/DiabloIIv1.09_File_Format.shtml
-# d2s file format https://github.com/krisives/d2s-format
-# Themperor on discord for the RecalcCRC.exe tool
-# d2s converter, TY Riv, https://d07riv.github.io/d2r.html 
-# d2s converter, TY Dschu, https://dschu012.github.io/d2s/

@@ -59,7 +59,6 @@ class Mywin(wx.Frame):
             except Exception as e:
                 wx.LogError(f"Error: {e}")
 
-
 		
 app  =  wx.App() 
 Mywin(None,'D2S Savefile Edit') 

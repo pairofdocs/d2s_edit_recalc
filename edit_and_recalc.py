@@ -35,10 +35,12 @@ def open_and_edit(filename):
     # skip comments and blank lines and apply hex edits/patches
     for line in [l for l in lines if l.strip() and l[0] != '#']:
         # print(line)
-
         address = int(line.split(',')[0])
-        hexstr_list = line.split(',')[1].strip().split()
-        
+        if len(line.split(',')) > 2:  # decimal. convert to little endian hex e.g.  333deci -> 4d 01 00 00
+            hexstr_list = int(line.split(',')[1].strip()).to_bytes(4, 'little').hex(' ').split()
+        else:  # hex
+            hexstr_list = line.split(',')[1].strip().split()
+         
         # edit bytesarray       # orig 0:2  int85, 170 -> (b'U\xaa') -> 55aa
         for i in range(len(hexstr_list)):
             bytarr[address + i] = int(hexstr_list[i], 16)
@@ -46,7 +48,6 @@ def open_and_edit(filename):
     # write patched file with updated checksum
     with open(filename, 'wb') as f:
         f.write(fix_checksum(bytarr))
-
 
 
 if __name__ == "__main__":

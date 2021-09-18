@@ -37,6 +37,18 @@ This is the quest edit **enabled**:
 511, 00 00
 ```
 
+This is the Map ID, Seed edit **enabled**:
+```
+# set the char seed to `1337`
+171, 1337, decimal
+```
+
+
+## Build GUI
+`pip install wxpython`  
+`pip install pyinstaller`  
+`pyinstaller d2s_edit.py --onefile -w`
+
 
 ## Credits and Tools 
 - d2s save file format, https://user.xmission.com/~trevin/DiabloIIv1.09_File_Format.shtml
