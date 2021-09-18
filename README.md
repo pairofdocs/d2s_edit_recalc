@@ -47,7 +47,7 @@ This is the Map ID, Seed edit **enabled**:
 ## Build GUI
 `pip install wxpython`  
 `pip install pyinstaller`  
-`pyinstaller d2s_edit.py --onefile -w`
+`pyinstaller --add-data 'd2logo_sm.png;.' --onefile -w d2s_edit.py`  ([Note](https://pyinstaller.readthedocs.io/en/stable/usage.html#what-to-bundle-where-to-search): use `d2logo_sm.png;.` on windows  and `d2logo_sm.png:.` on most unix systems)
 
 
 ## Credits and Tools 
