@@ -1,4 +1,4 @@
-### Quests ----------------------------------------------------------------------
+### Quests -----------------
 
 # reset cowking kill Norm. This also sets the cain quest as completed
 #353, 19 10
@@ -50,11 +50,11 @@
 #591, 00 00
 
 
-### Char Map ID, Seed -----------------------------------------------------------
+### Char Map ID, Seed ------
 #171, 333, decimal
 
 
-### Char Stats ------------------------------------------------------------------
+### Char Stats -------------
 
 # rename character. Note: the d2s file has to be named the same as the char name
 # offset 20-35
