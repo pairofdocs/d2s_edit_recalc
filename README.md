@@ -6,6 +6,7 @@
 - Reset the izual quest
 - Reset the hell forge quest
 - Reset the larzuk item socket quest
+- Set your character's Map ID / Seed (like the `-seed` launch option in LoD)
 
 
 ## Usage
