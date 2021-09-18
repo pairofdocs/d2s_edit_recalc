@@ -15,7 +15,7 @@
 4. Click on "Open File and Run" to select you `.d2s` character file and apply the edits from `patches.txt`. Save files are in `Saved Games\Diablo II Resurrected Tech Alpha\`
 5. Start D2
 
-- ![GUI](https://i.imgur.com/mJIZOQ6.png)
+- ![GUI](https://i.imgur.com/BIRWq8W.png)
 
 **Note**: The first time `d2s_edit.exe` is run on a char file (e.g. `MyAwesomeChar.d2s`), it creates a backup file (`MyAwesomeChar.d2s.bak`). 
 This backup can be moved/copied and used if you want to undo any changes.
