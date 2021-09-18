@@ -4,7 +4,7 @@
 #353, 19 10
 
 # reset cowking kill NM.   ""    (Quest struct is len 96 bytes)
-449, 19 10
+#449, 19 10
 
 # reset cowking kill Hell. "" 
 #545, 19 10
@@ -14,7 +14,7 @@
 #415, 00 00
 
 # reset larzuk quest NM
-511, 00 00
+#511, 00 00
 
 # reset larzuk quest Hell
 #607, 00 00
@@ -34,7 +34,7 @@
 #395, 00 00
 
 # reset izual quest NM
-491, 00 00
+#491, 00 00
 
 # reset izual quest Hell
 #587, 00 00
@@ -44,14 +44,14 @@
 #399, 00 00
 
 # reset hellforge quest NM
-495, 00 00
+#495, 00 00
 
 # reset hellforge quest Hell
 #591, 00 00
 
 
 ### Char Map ID, Seed -----------------------------------------------------------
-171, 333, decimal
+#171, 333, decimal
 
 
 ### Char Stats ------------------------------------------------------------------
