@@ -45,6 +45,16 @@ This is the Map ID, Seed edit **enabled**:
 ```
 
 
+## Reset Other Quests
+To reset quests that are not in `patches.txt` currently see this table's section `Quest Completion Data` from Trevin https://user.xmission.com/~trevin/DiabloIIv1.09_File_Format.shtml.  
+The quest block starts at position `345` for a character savefile and the position for Andariel in Normal difficulty (quest name `Sisters to the Slaughter`), for example, would be `345 + 12` (from the Byte Position Column) = `357`. And for higher difficulties add the offset `96` per difficulty. So Andariel at Nightmare would be at position `357 + 96` = `453` and for Hell the position would be `453 + 96` = `549`.  
+Once the correct position for a quest is determined, add the corresponding lines to `patches.txt`:  
+```
+# Reset Andariel Normal
+357, 00 00
+```
+
+
 ## Build GUI
 `pip install wxpython pyinstaller`  
 `pyinstaller --add-data 'd2logo_sm.png;.' --onefile -w d2s_edit.py`  ([Note](https://pyinstaller.readthedocs.io/en/stable/usage.html#what-to-bundle-where-to-search): use `d2logo_sm.png;.` on windows  and `d2logo_sm.png:.` on most unix systems)

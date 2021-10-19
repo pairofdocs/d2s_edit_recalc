@@ -1,5 +1,15 @@
 ### Quests -----------------
 
+# reset Andy quest Norm
+#357, 00 00
+
+# reset Andy quest NM
+#453, 00 00
+
+# reset Andy quest Hell
+#549, 00 00
+
+
 # reset cowking kill Norm. This also sets the cain quest as completed
 #353, 19 10
 
